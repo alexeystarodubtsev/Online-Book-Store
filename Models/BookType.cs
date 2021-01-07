@@ -9,6 +9,7 @@ namespace Online_book_store.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int Title { get; set; }
+        [Required]
+        public string Title { get; set; }
     }
 }

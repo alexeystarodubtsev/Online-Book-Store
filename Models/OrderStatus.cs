@@ -8,9 +8,8 @@ namespace Online_book_store.Models
     public class OrderStatus
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string Status { get; set; }
-        [Required]
         public int ID { get; set; }
         [Required]
+        public string Status { get; set; }
     }
 }

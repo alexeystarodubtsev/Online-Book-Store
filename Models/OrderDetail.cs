@@ -8,16 +8,16 @@ namespace Online_book_store.Models
     public class OrderDetail
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Qty { get; set; }
+        public int ID { get; set; }
+        [Required]
         public int Cost { get; set; }
         [Required]
         public int OrderID { get; set; }
         [Required]
         public int BookID { get; set; }
         [Required]
-        public int ID { get; set; }
+        public int Qty { get; set; }
         [Required]
         public int BookTypeID { get; set; }
-        [Required]
     }
 }

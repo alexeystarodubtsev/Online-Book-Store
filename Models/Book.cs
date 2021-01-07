@@ -8,8 +8,8 @@ namespace Online_book_store.Models
     public class Book
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int PriseAudio { get; set; }
-        public int PriseElectronic { get; set; }
+        public int ID { get; set; }
+        public int PriceElectronic { get; set; }
         [Required]
         public string Title { get; set; }
         [Required]
@@ -21,12 +21,11 @@ namespace Online_book_store.Models
         [Required]
         public int PublisherID { get; set; }
         [Required]
-        public int ID { get; set; }
+        public int PriceAudio { get; set; }
         [Required]
         public int Qty { get; set; }
         [Required]
         public int Price { get; set; }
-        [Required]
 
     }
 }

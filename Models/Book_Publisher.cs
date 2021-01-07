@@ -8,7 +8,10 @@ namespace Online_book_store.Models
     public class Book_Publisher
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+        [Required]
         public int BookID { get; set; }
+        [Required]
         public int PublisherID { get; set; }
     }
 }

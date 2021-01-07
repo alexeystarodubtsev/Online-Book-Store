@@ -10,6 +10,13 @@ namespace Online_book_store.Models
         //dotnet ef database update LastGoodMigration
         //dotnet ef migrations remove
         public DbSet<Author> Authors { get; set; }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Book_Publisher> Book_Publishers { get; set; }
+        public DbSet<BookType> BookTypes { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<OrderStatus> OrderStatuses { get; set; }
+        public DbSet<Publisher> Publishers { get; set; }
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
