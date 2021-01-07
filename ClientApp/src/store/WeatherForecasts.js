@@ -13,6 +13,11 @@ export const actionCreators = {
 
     const url = `api/SampleData/WeatherForecasts?startDateIndex=${startDateIndex}`;
     const response = await fetch(url);
+    console.log("test");
+    const url2 = `api/book`;
+    const response2 = await fetch(url2);
+    const books = await response2.json();
+    console.log(books);
     const forecasts = await response.json();
 
     dispatch({ type: receiveWeatherForecastsType, startDateIndex, forecasts });
