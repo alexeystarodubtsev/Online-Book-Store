@@ -1,0 +1,10 @@
+﻿.login {
+    width: 100%;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.btnLogin {
+}

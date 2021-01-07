@@ -1,26 +1,16 @@
-﻿const requestWeatherForecastsType = 'REQUEST_WEATHER_FORECASTS';
+﻿const requestBooks = 'REQUEST_BOOKS';
 const receiveWeatherForecastsType = 'RECEIVE_WEATHER_FORECASTS';
-const initialState = { forecasts: [], isLoading: false };
+const initialState = { bookList: [], isLoading: false, adminLoggedIn: false };
 
 export const actionCreators = {
-    requestWeatherForecasts: startDateIndex => async (dispatch, getState) => {
-        if (startDateIndex === getState().weatherForecasts.startDateIndex) {
-            // Don't issue a duplicate request (we already have or are loading the requested data)
-            return;
-        }
+    requestBooks: () => async (dispatch, getState) => {
+        // dispatch({ type: requestWeatherForecastsType, startDateIndex });
 
-        dispatch({ type: requestWeatherForecastsType, startDateIndex });
-
-        const url = `api/SampleData/WeatherForecasts?startDateIndex=${startDateIndex}`;
+        const url = `api/book`;
         const response = await fetch(url);
-        console.log("test");
-        const url2 = `api/book`;
-        const response2 = await fetch(url2);
-        const books = await response2.json();
+        const books = await response.json();
         console.log(books);
-        const forecasts = await response.json();
-
-        dispatch({ type: receiveWeatherForecastsType, startDateIndex, forecasts });
+        
     }
 };
 

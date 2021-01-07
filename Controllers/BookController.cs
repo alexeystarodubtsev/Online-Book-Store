@@ -17,7 +17,7 @@ namespace Online_book_store.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Models.Author> GetCompanies()
+        public IEnumerable<Models.Author> GetBooks()
         {
             List<Models.Author>  authors = new List<Models.Author>();
             foreach (var author in db.Authors)
